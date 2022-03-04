@@ -4,48 +4,63 @@
 
     Private Sub Enter(sender As Object, e As EventArgs) Handles btn_student.Click
         Dim name As String
+        Dim testa As Boolean
+        Dim testb As Boolean
+        Dim testc As Boolean
 
-        array(0, 0) = " "
-        array(1, 0) = "English"
-        array(2, 0) = "Maths"
-        array(3, 0) = "Pe"
+        testa = IsNumeric((txt_english.Text))
+        testb = IsNumeric((txt_maths.Text))
+        testc = IsNumeric((txt_pe.Text))
+        'MsgBox(testa)
+        'MsgBox(testb)
+        If testa = True And testb = True And testc = True Then
 
 
-        name = lbl_name.Text
+            array(0, 0) = " "
+            array(1, 0) = "English"
+            array(2, 0) = "Maths"
+            array(3, 0) = "Pe"
 
 
-        If counter >= 0 And counter <= 5 Then
-            array(0, counter + 1) = name
-            array(1, counter + 1) = txt_english.Text
-            array(2, counter + 1) = txt_maths.Text
-            array(3, counter + 1) = txt_pe.Text
-            counter = counter + 1
+            name = lbl_name.Text
 
+
+            If counter >= 0 And counter <= 5 Then
+                array(0, counter + 1) = name
+                array(1, counter + 1) = txt_english.Text
+                array(2, counter + 1) = txt_maths.Text
+                array(3, counter + 1) = txt_pe.Text
+                counter = counter + 1
+
+                txt_english.Text = " "
+                txt_maths.Text = " "
+                txt_pe.Text = " "
+
+                MsgBox("Marks entered successfully")
+            Else
+                MsgBox("Error")
+            End If
+
+            If counter = 0 Then
+                lbl_name.Text = "John"
+            ElseIf counter = 1 Then
+                lbl_name.Text = "Damien"
+            ElseIf counter = 2 Then
+                lbl_name.Text = "Mark"
+            ElseIf counter = 3 Then
+                lbl_name.Text = "Joshua"
+            ElseIf counter = 4 Then
+                lbl_name.Text = "Mary"
+            ElseIf counter = 5 Then
+                lbl_name.Text = "Maria"
+
+            End If
+        Else
+            MsgBox("Please enter valid marks")
             txt_english.Text = " "
             txt_maths.Text = " "
             txt_pe.Text = " "
-
-            MsgBox("Marks entered successfully")
-        Else
-            MsgBox("Error")
         End If
-
-        If counter = 0 Then
-            lbl_name.Text = "John"
-        ElseIf counter = 1 Then
-            lbl_name.Text = "Dam"
-        ElseIf counter = 2 Then
-            lbl_name.Text = "Mark"
-        ElseIf counter = 3 Then
-            lbl_name.Text = "Joshua"
-        ElseIf counter = 4 Then
-            lbl_name.Text = "Mary"
-        ElseIf counter = 5 Then
-            lbl_name.Text = "Maria"
-
-        End If
-
-
     End Sub
 
 
@@ -55,7 +70,7 @@
 
         'this code will save the entire array in a new CSV file
         Dim file As System.IO.StreamWriter
-        file = My.Computer.FileSystem.OpenTextFileWriter("E:\VB\marks11.csv", True)
+        file = My.Computer.FileSystem.OpenTextFileWriter("E:\newmarks.csv", True)
         Dim coloumns As Integer = 0
         Dim c1 As Integer = 0
         Dim rows = 7
