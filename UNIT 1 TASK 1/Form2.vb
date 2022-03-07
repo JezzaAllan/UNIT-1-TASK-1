@@ -8,9 +8,9 @@
         Dim sr As New System.IO.StreamReader("E:\VB\markdata.csv")
         Dim linesInFile As Integer = 1
         Dim x As Integer = 0
-        Label6.Text = x
-
-        Do Until sr.EndOfStream = True
+        'Label6.Text = x
+        MsgBox("File Loaded Successfully")
+        Do Until sr.EndOfStream = True 'And counter = 6
             linesInFile = linesInFile + 1
             Label5.Text = sr.ReadLine & vbNewLine
             Dim testArray() As String = Split(Label5.Text, Delimiter:=",")
@@ -40,8 +40,8 @@
         Loop
 
 
-
-
+        MsgBox("End of studnets")
+        button_submit.Enabled = False
 
 
     End Sub
