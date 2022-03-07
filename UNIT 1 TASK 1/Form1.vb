@@ -70,7 +70,7 @@
 
         'this code will save the entire array in a new CSV file
         Dim file As System.IO.StreamWriter
-        file = My.Computer.FileSystem.OpenTextFileWriter("E:\newmarks.csv", True)
+        file = My.Computer.FileSystem.OpenTextFileWriter("E:\newmarks10.csv", True)
         Dim coloumns As Integer = 0
         Dim c1 As Integer = 0
         Dim rows = 7
@@ -94,5 +94,14 @@
         MsgBox("Finished writing to file!")
     End Sub
 
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        Form2.Show()
+        'Module1.main()
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        Form3.Show()
+        'Module1.main()
+    End Sub
 End Class

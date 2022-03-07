@@ -32,6 +32,8 @@ Partial Class Form1
         Me.lbl_englisht = New System.Windows.Forms.Label()
         Me.lbl_mathst = New System.Windows.Forms.Label()
         Me.lbl_pet = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn_student
@@ -118,11 +120,32 @@ Partial Class Form1
         Me.lbl_pet.TabIndex = 16
         Me.lbl_pet.Text = "P.E."
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(53, 380)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 17
+        Me.Button2.Text = "Task 2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(145, 380)
+        Me.Button1.Name = "Button1"
+        Me.Button1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "Task 3"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.lbl_pet)
         Me.Controls.Add(Me.lbl_mathst)
         Me.Controls.Add(Me.lbl_englisht)
@@ -150,4 +173,6 @@ Partial Class Form1
     Friend WithEvents lbl_englisht As Label
     Friend WithEvents lbl_mathst As Label
     Friend WithEvents lbl_pet As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class
