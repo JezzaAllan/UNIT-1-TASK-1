@@ -8,7 +8,7 @@
     Dim english As Double
     Dim maths As Double
     Dim pe As Double
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
 
         'Prompt for search entries
         MsgBox("Loading file")
@@ -19,9 +19,9 @@
 
             linesInFile = linesInFile + 1 ' indicates the number of rows, j
 
-            Label1.Text = sr.ReadLine & vbNewLine
+            lbl_holder.Text = sr.ReadLine & vbNewLine
             'the test array splits the label2 into array items seperated by a comma
-            Dim testArray() As String = Split(Label1.Text, Delimiter:=",")
+            Dim testArray() As String = Split(lbl_holder.Text, Delimiter:=",")
             'MsgBox(testArray.Length) ' 7 columns in 1 row. testArray.length=7
 
             For columns = 0 To (testArray.Length - 1)
@@ -35,50 +35,70 @@
         'MsgBox(bigarray(0, 1)) ' This is the title row (not data)
         MsgBox("Let's find our entry")
 
-        Dim textbooktofind, purchasertofind As String
-        textbooktofind = InputBox("What is the name of the student?")
-        purchasertofind = InputBox("What is the name of the subject?")
+        Dim student As String
+        student = InputBox("What is the name of the student?")
+        'purchasertofind = InputBox("What is the name of the subject?")
 
 
-        Dim bfound As Boolean
+        Dim validation As Boolean
+        Dim sfound As Boolean = False
+        Dim blank As Boolean = False
 
-
+        validation = IsNumeric((student))
 
         'MsgBox(linesInFile)
-        For icount = 0 To linesInFile
+        If student = "" Then
+            blank = True
+        End If
 
-            MsgBox("Count = " + Str(icount))
-            If bigarray(0, icount) = textbooktofind Then 'And bigarray(2, icount) = purchasertofind Then
-                MsgBox("Book found at Count = " + Str(icount))
-
-                bfound = True
-                MsgBox("CSV loaded successfully!")
-                Label5.Text = bigarray(0, icount)
-                Label2.Text = bigarray(1, icount)
-                Label3.Text = bigarray(2, icount)
-                Label4.Text = bigarray(3, icount)
+        If blank = False Then
 
 
-                'MsgBox("Click button on right to rate book")
+            If validation = False Then
+                For icount = 0 To linesInFile
 
-                'Button2.Enabled = True
-                'rate the book
+                    'MsgBox("Count = " + Str(icount))
+                    If bigarray(0, icount) = student Then 'And bigarray(2, icount) = purchasertofind Then
+                        MsgBox("Student found at Count = " + Str(icount))
 
+                        sfound = True
+                        'MsgBox("CSV loaded successfully!")
+                        lbl_found_student.Text = bigarray(0, icount)
+                        lbl_found_english.Text = bigarray(1, icount)
+                        lbl_found_maths.Text = bigarray(2, icount)
+                        lbl_found_pe.Text = bigarray(3, icount)
+
+
+                        'MsgBox("Click button on right to rate book")
+
+                        'Button2.Enabled = True
+                        'rate the book
+
+
+                    End If
+
+                Next
             Else
-                'MsgBox("Book not found!")
-                'icount = icount + 1
-                'Exit For
+                MsgBox("Please enter a valid student name")
+                sfound = True
             End If
 
-        Next
+            If sfound = False Then
+                MsgBox("Sorry, there was no match. Let's try again.")
+            End If
+        Else
+            MsgBox("Please enter a valid student name")
+        End If
+
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        bigarray(1, 2) = 40
+    Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
+        Me.Hide()
+        Form1.Show()
     End Sub
 
-    Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles button_submit.Click
+    Private Sub btn_submit_Click(sender As Object, e As EventArgs)
 
         'this code will save the entire array in a new CSV file
         Dim file As System.IO.StreamWriter

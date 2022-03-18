@@ -22,78 +22,78 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btn_search = New System.Windows.Forms.Button()
+        Me.lbl_holder = New System.Windows.Forms.Label()
+        Me.lbl_found_pe = New System.Windows.Forms.Label()
+        Me.lbl_found_maths = New System.Windows.Forms.Label()
+        Me.lbl_found_english = New System.Windows.Forms.Label()
+        Me.lbl_found_student = New System.Windows.Forms.Label()
         Me.lbl_pe = New System.Windows.Forms.Label()
         Me.lbl_english = New System.Windows.Forms.Label()
         Me.lbl_maths = New System.Windows.Forms.Label()
         Me.lbl_student = New System.Windows.Forms.Label()
-        Me.button_submit = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btn_home = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Button1
+        'btn_search
         '
-        Me.Button1.Location = New System.Drawing.Point(529, 356)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(129, 48)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_search.Location = New System.Drawing.Point(640, 380)
+        Me.btn_search.Name = "btn_search"
+        Me.btn_search.Size = New System.Drawing.Size(129, 48)
+        Me.btn_search.TabIndex = 0
+        Me.btn_search.Text = "Enter student"
+        Me.btn_search.UseVisualStyleBackColor = True
         '
-        'Label1
+        'lbl_holder
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(593, 44)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Label1"
+        Me.lbl_holder.AutoSize = True
+        Me.lbl_holder.Location = New System.Drawing.Point(593, 44)
+        Me.lbl_holder.Name = "lbl_holder"
+        Me.lbl_holder.Size = New System.Drawing.Size(16, 13)
+        Me.lbl_holder.TabIndex = 1
+        Me.lbl_holder.Text = "..."
         '
-        'Label4
+        'lbl_found_pe
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(346, 214)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
-        Me.Label4.TabIndex = 36
-        Me.Label4.Text = "Label4"
+        Me.lbl_found_pe.AutoSize = True
+        Me.lbl_found_pe.Location = New System.Drawing.Point(324, 246)
+        Me.lbl_found_pe.Name = "lbl_found_pe"
+        Me.lbl_found_pe.Size = New System.Drawing.Size(16, 13)
+        Me.lbl_found_pe.TabIndex = 36
+        Me.lbl_found_pe.Text = "..."
         '
-        'Label3
+        'lbl_found_maths
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(346, 175)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
-        Me.Label3.TabIndex = 35
-        Me.Label3.Text = "Label3"
+        Me.lbl_found_maths.AutoSize = True
+        Me.lbl_found_maths.Location = New System.Drawing.Point(324, 207)
+        Me.lbl_found_maths.Name = "lbl_found_maths"
+        Me.lbl_found_maths.Size = New System.Drawing.Size(16, 13)
+        Me.lbl_found_maths.TabIndex = 35
+        Me.lbl_found_maths.Text = "..."
         '
-        'Label2
+        'lbl_found_english
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(346, 140)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 34
-        Me.Label2.Text = "Label2"
+        Me.lbl_found_english.AutoSize = True
+        Me.lbl_found_english.Location = New System.Drawing.Point(324, 172)
+        Me.lbl_found_english.Name = "lbl_found_english"
+        Me.lbl_found_english.Size = New System.Drawing.Size(16, 13)
+        Me.lbl_found_english.TabIndex = 34
+        Me.lbl_found_english.Text = "..."
         '
-        'Label5
+        'lbl_found_student
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(346, 103)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 13)
-        Me.Label5.TabIndex = 33
-        Me.Label5.Text = "Label5"
+        Me.lbl_found_student.AutoSize = True
+        Me.lbl_found_student.Location = New System.Drawing.Point(324, 135)
+        Me.lbl_found_student.Name = "lbl_found_student"
+        Me.lbl_found_student.Size = New System.Drawing.Size(16, 13)
+        Me.lbl_found_student.TabIndex = 33
+        Me.lbl_found_student.Text = "..."
         '
         'lbl_pe
         '
         Me.lbl_pe.AutoSize = True
-        Me.lbl_pe.Location = New System.Drawing.Point(186, 214)
+        Me.lbl_pe.Location = New System.Drawing.Point(164, 246)
         Me.lbl_pe.Name = "lbl_pe"
         Me.lbl_pe.Size = New System.Drawing.Size(21, 13)
         Me.lbl_pe.TabIndex = 32
@@ -102,7 +102,7 @@ Partial Class Form3
         'lbl_english
         '
         Me.lbl_english.AutoSize = True
-        Me.lbl_english.Location = New System.Drawing.Point(186, 140)
+        Me.lbl_english.Location = New System.Drawing.Point(164, 172)
         Me.lbl_english.Name = "lbl_english"
         Me.lbl_english.Size = New System.Drawing.Size(41, 13)
         Me.lbl_english.TabIndex = 31
@@ -111,7 +111,7 @@ Partial Class Form3
         'lbl_maths
         '
         Me.lbl_maths.AutoSize = True
-        Me.lbl_maths.Location = New System.Drawing.Point(186, 175)
+        Me.lbl_maths.Location = New System.Drawing.Point(164, 207)
         Me.lbl_maths.Name = "lbl_maths"
         Me.lbl_maths.Size = New System.Drawing.Size(36, 13)
         Me.lbl_maths.TabIndex = 30
@@ -120,47 +120,47 @@ Partial Class Form3
         'lbl_student
         '
         Me.lbl_student.AutoSize = True
-        Me.lbl_student.Location = New System.Drawing.Point(186, 103)
+        Me.lbl_student.Location = New System.Drawing.Point(164, 135)
         Me.lbl_student.Name = "lbl_student"
         Me.lbl_student.Size = New System.Drawing.Size(44, 13)
         Me.lbl_student.TabIndex = 29
         Me.lbl_student.Text = "Student"
         '
-        'button_submit
+        'btn_home
         '
-        Me.button_submit.Location = New System.Drawing.Point(664, 356)
-        Me.button_submit.Name = "button_submit"
-        Me.button_submit.Size = New System.Drawing.Size(75, 48)
-        Me.button_submit.TabIndex = 37
-        Me.button_submit.Text = "submit"
-        Me.button_submit.UseVisualStyleBackColor = True
+        Me.btn_home.Location = New System.Drawing.Point(45, 393)
+        Me.btn_home.Name = "btn_home"
+        Me.btn_home.Size = New System.Drawing.Size(75, 23)
+        Me.btn_home.TabIndex = 39
+        Me.btn_home.Text = "Home"
+        Me.btn_home.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Label6
         '
-        Me.Button2.Location = New System.Drawing.Point(664, 327)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 38
-        Me.Button2.Text = "john e = 40"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(234, 79)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(68, 13)
+        Me.Label6.TabIndex = 40
+        Me.Label6.Text = "Mark Display"
         '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.button_submit)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.btn_home)
+        Me.Controls.Add(Me.lbl_found_pe)
+        Me.Controls.Add(Me.lbl_found_maths)
+        Me.Controls.Add(Me.lbl_found_english)
+        Me.Controls.Add(Me.lbl_found_student)
         Me.Controls.Add(Me.lbl_pe)
         Me.Controls.Add(Me.lbl_english)
         Me.Controls.Add(Me.lbl_maths)
         Me.Controls.Add(Me.lbl_student)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lbl_holder)
+        Me.Controls.Add(Me.btn_search)
         Me.Name = "Form3"
         Me.Text = "Form3"
         Me.ResumeLayout(False)
@@ -168,16 +168,16 @@ Partial Class Form3
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents btn_search As Button
+    Friend WithEvents lbl_holder As Label
+    Friend WithEvents lbl_found_pe As Label
+    Friend WithEvents lbl_found_maths As Label
+    Friend WithEvents lbl_found_english As Label
+    Friend WithEvents lbl_found_student As Label
     Friend WithEvents lbl_pe As Label
     Friend WithEvents lbl_english As Label
     Friend WithEvents lbl_maths As Label
     Friend WithEvents lbl_student As Label
-    Friend WithEvents button_submit As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btn_home As Button
+    Friend WithEvents Label6 As Label
 End Class
