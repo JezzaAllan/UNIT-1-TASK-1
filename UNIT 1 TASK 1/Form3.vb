@@ -3,7 +3,7 @@
     Dim icount As Integer
     Dim linesInFile As Integer = 0
     Dim columns As Integer
-    Dim sr As New System.IO.StreamReader("E:\VB\markdata.csv")
+    Dim sr As New System.IO.StreamReader("G:\VB\markdata.csv")
     Dim x, y As Integer
     Dim english As Double
     Dim maths As Double
@@ -102,7 +102,7 @@
 
         'this code will save the entire array in a new CSV file
         Dim file As System.IO.StreamWriter
-        file = My.Computer.FileSystem.OpenTextFileWriter("E:\newmarkdata.csv", True)
+        file = My.Computer.FileSystem.OpenTextFileWriter("G:\newmarkdata.csv", True)
         Dim coloumns As Integer = 0
         Dim c1 As Integer = 0
         Dim rows = 7
